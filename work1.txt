@@ -1,0 +1,21 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+type Circle struct {
+	radius float64
+}
+
+func (r *Circle) Area() float64 {
+	return math.Pi * r.radius * r.radius
+}
+func main() {
+	var radius float64
+	fmt.Printf("Enter radius of the circle:")
+	fmt.Scanf("%f", &radius)
+	c := Circle{radius: radius}
+	fmt.Printf("Area is: %.2f\n", c.Area())
+}
